@@ -17,12 +17,12 @@ const navigation: Navigation[] = [
   },
   {
     key: "repo",
-    href: "https://github.com/VicBrnd/boilerplate-tauri-next-shadcn",
+    href: "https://github.com/VicBrnd/boilerplate-next-shadcn",
     tooltip: "Github Repo",
   },
   {
     key: "git clone",
-    gitUrl: "https://github.com/votre-repo/votre-projet.git",
+    gitUrl: "https://github.com/VicBrnd/boilerplate-next-shadcn.git",
     tooltip: "Copy Git Url",
   },
   {
