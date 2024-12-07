@@ -1,4 +1,4 @@
-import { LinkPreview } from "@/components/delete-this/link-preview";
+import { LinkPreview } from "@/components/delete-this/link-previews";
 
 export default function Home() {
   return (
