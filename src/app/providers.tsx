@@ -1,4 +1,4 @@
-import { Toolbar } from "@/components/toolbar/toolbar";
+import { Toolbar } from "@/components/delete-this/toolbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";

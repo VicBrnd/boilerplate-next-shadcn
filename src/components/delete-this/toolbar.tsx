@@ -1,7 +1,7 @@
 "use client";
 
+import { ToolbarItem } from "@/components/delete-this/toolbar-item";
 import { usePathname } from "next/navigation";
-import { ToolbarItem } from "./toolbar-item";
 
 interface Navigation {
   key: string;
@@ -24,16 +24,6 @@ const navigation: Navigation[] = [
     key: "git clone",
     gitUrl: "https://github.com/VicBrnd/boilerplate-next-shadcn.git",
     tooltip: "Copy Git Url",
-  },
-  {
-    key: "next",
-    href: "https://nextjs.org/",
-    tooltip: "Next Web",
-  },
-  {
-    key: "shadcn",
-    href: "https://ui.shadcn.com/",
-    tooltip: "Shadcn Web",
   },
   {
     key: "error",
