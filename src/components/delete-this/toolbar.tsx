@@ -36,7 +36,7 @@ export function Toolbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-background/80 backdrop-blur-sm border rounded-full px-6 py-3 shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-background/90">
+    <nav className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-background/80 backdrop-blur-sm border rounded-full px-6 py-3 shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-background/90">
       <ul className="flex gap-3">
         {navigation.map((nav) => {
           const isCurrentPath = nav.href ? pathname === nav.href : false;

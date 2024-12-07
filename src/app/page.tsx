@@ -51,7 +51,7 @@ export default function Home() {
           gitclone
         </LinkPreview>
         <LinkPreview
-          url="/not-found"
+          url="https://boilerplate-next-shadcn.vercel.app/not-found"
           className="relative rounded text-red-600 hover:green-red-700 bg-red-600/5 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold"
         >
           not-found/page.tsx
