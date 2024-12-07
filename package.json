@@ -10,6 +10,7 @@
     "shadcn": "bunx --bun shadcn@latest add"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
     "@t3-oss/env-nextjs": "^0.11.1",
     "@vercel/analytics": "^1.4.1",

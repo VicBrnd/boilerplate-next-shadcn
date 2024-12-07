@@ -35,6 +35,11 @@ const navigation: Navigation[] = [
     href: "https://ui.shadcn.com/",
     tooltip: "Shadcn Web",
   },
+  {
+    key: "error",
+    href: "/error",
+    tooltip: "Error Page",
+  },
 ];
 
 export function Toolbar() {

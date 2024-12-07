@@ -15,7 +15,7 @@ export function Providers({ children }: ProvidersProps) {
       <TooltipProvider>
         {children}
         <Toolbar />
-        <Toaster />
+        <Toaster position="top-right" />
       </TooltipProvider>
       <Analytics />
       <SpeedInsights />

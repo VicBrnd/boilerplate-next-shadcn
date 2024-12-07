@@ -58,10 +58,13 @@ export function ToolbarItem({ nav, isCurrentPath }: ToolbarItemProps) {
 
   return (
     <li className="flex flex-col items-center gap-2">
-      <Tooltip>
+      <Tooltip delayDuration={0}>
         <TooltipTrigger asChild>{itemContent}</TooltipTrigger>
         {nav.tooltip && (
-          <TooltipContent>
+          <TooltipContent
+            sideOffset={15}
+            className="bg-background/80 backdrop-blur-sm border rounded-full  shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-background/90 text-muted-foreground"
+          >
             <p>{nav.tooltip}</p>
           </TooltipContent>
         )}
