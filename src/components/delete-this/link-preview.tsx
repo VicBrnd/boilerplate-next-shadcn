@@ -55,7 +55,6 @@ export const LinkPreview = ({
   }
 
   const [isOpen, setOpen] = React.useState(false);
-
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -64,14 +63,13 @@ export const LinkPreview = ({
 
   const springConfig = { stiffness: 100, damping: 15 };
   const x = useMotionValue(0);
-
   const translateX = useSpring(x, springConfig);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleMouseMove = (event: any) => {
-    const targetRect = event.target.getBoundingClientRect();
+  // Remplacez 'any' par le type approprié
+  const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const targetRect = event.currentTarget.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Réduit l'effet pour le rendre subtil
     x.set(offsetFromCenter);
   };
 
@@ -101,9 +99,9 @@ export const LinkPreview = ({
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
           className={cn("text-black dark:text-white", className)}
-          href={url}
+          asChild // Utilisez 'asChild' pour personnaliser l'élément déclencheur
         >
-          {children}
+          <a href={url}>{children}</a>
         </HoverCardPrimitive.Trigger>
 
         <HoverCardPrimitive.Content
