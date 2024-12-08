@@ -1,5 +1,6 @@
-import { Providers } from "@/app/providers";
 import { AppInfo } from "@/constants/app-info";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className} suppressHydrationWarning>
-        <Providers>{children}</Providers>
+        {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -1,42 +1,25 @@
-"use client";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
-import { AlertCircle, HelpCircle, Home } from "lucide-react";
-import { useRouter } from "next/navigation";
-
-export default function ErrorPage({ error }: { error?: Error }) {
-  const router = useRouter();
-
-  const errorMessage =
-    error?.message ||
-    "Il semble que nous ayons rencontré un problème. Nous nous excusons pour le désagrément.";
-
+export default function Page404() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center px-4">
-      <div className="max-w-md w-full space-y-8 text-center">
-        <div className="animate-bounce">
-          <AlertCircle className="mx-auto h-24 w-24 text-red-500" />
-        </div>
-        <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-          Oops! Une erreur s'est produite
-        </h2>
-        <p className="mt-2 text-sm text-gray-600">{errorMessage}</p>
-        <div className="mt-8 space-y-4">
-          <Button onClick={() => router.push("/")} className="w-full">
-            <Home className="mr-2 h-4 w-4" /> Retour à l'accueil
-          </Button>
-          <Button
-            onClick={() => router.push("/contact")}
-            variant="outline"
-            className="w-full"
-          >
-            <HelpCircle className="mr-2 h-4 w-4" /> Besoin d'aide ?
-          </Button>
-        </div>
-        <div className="mt-6 text-xs text-gray-400">
-          Statut réseau : <span className="text-green-500">●</span> Opérationnel
-        </div>
+    <main className=" flex min-h-screen flex-col items-center justify-center gap-8 bg-gray-50 px-4">
+      <div className="space-y-3 text-center">
+        <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+          404
+        </code>
+        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          Page not found
+        </h1>
+        <p className="text-base text-muted-foreground">
+          Sorry, we couldn't find the page you're looking for.
+        </p>
       </div>
-    </div>
+      <div className="flex items-center gap-4">
+        <Link href="/" className={buttonVariants({ variant: "default" })}>
+          Go back home
+        </Link>
+      </div>
+    </main>
   );
 }
